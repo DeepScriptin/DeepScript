@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
 
           <div className="space-y-12">
             <h3 className="text-brand-light font-black text-xs uppercase tracking-[0.5em] mb-14 opacity-40">Direct Pulse</h3>
-            <div className="space-y-12">
+            <div className="space-y-8">
               <motion.div 
                 whileHover={{ x: 10 }}
                 className="flex items-center space-x-8 group cursor-pointer"
@@ -83,21 +83,20 @@ const Footer: React.FC = () => {
                 <span className="text-gray-300 text-xl font-black transition-colors group-hover:text-brand-accent">deepscript.in@gmail.com</span>
               </motion.div>
               
+              {/* CLEAN ONE LINE FOOTER PHONE */}
               <motion.div 
-                animate={{ 
-                  scale: [1, 1.02, 1],
-                  filter: ["drop-shadow(0 0 0px #0660d8)", "drop-shadow(0 0 35px rgba(203, 0, 218, 0.3))", "drop-shadow(0 0 0px #cb00da)"]
-                }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="flex flex-col space-y-4 bg-brand-primary/40 p-10 rounded-[2rem] border border-brand-purple/20 backdrop-blur-md"
+                whileHover={{ x: 10 }}
+                className="flex items-center space-x-8 group cursor-pointer p-6 rounded-2xl bg-brand-primary/40 border border-brand-accent/10 shadow-lg"
               >
-                <div className="flex items-center space-x-6">
-                  <Phone className="w-8 h-8 text-brand-accent" />
-                  <span className="text-2xl md:text-3xl font-black text-brand-accent tracking-tighter leading-none">+91 98418 67282</span>
+                <div className="p-4 rounded-xl bg-brand-primary border border-brand-accent/20 text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-primary transition-all shadow-xl group-hover:shadow-brand-accent/50">
+                  <Phone className="w-6 h-6" />
                 </div>
-                <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.4em] text-gray-500 font-black ml-1">
-                   <span className="w-3 h-3 rounded-full bg-brand-purple animate-pulse shadow-[0_0_10px_#cb00da]" />
-                   Neural Hub Connected
+                <div className="flex flex-col">
+                  <span className="text-brand-accent text-2xl font-black tracking-tighter leading-none">+91 98418 67282</span>
+                  <div className="flex items-center space-x-2 text-[8px] uppercase tracking-[0.3em] text-gray-500 font-bold mt-2">
+                     <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+                     Priority Active
+                  </div>
                 </div>
               </motion.div>
             </div>

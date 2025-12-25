@@ -25,8 +25,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-support relative overflow-hidden">
-      {/* High-Impact Decorative Glows - Re-matched to new Purple/Blue theme */}
+    <div className="pt-24 min-h-screen bg-brand-support relative overflow-hidden text-brand-light">
+      {/* High-Impact Decorative Glows */}
       <div className="absolute top-0 right-0 w-[1400px] h-[1400px] bg-brand-purple/5 rounded-full blur-[300px] pointer-events-none" />
       <div className="absolute -bottom-1/4 -left-1/4 w-[1000px] h-[1000px] bg-brand-accent/10 rounded-full blur-[250px] pointer-events-none" />
 
@@ -54,62 +54,37 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-12">
               <motion.div 
-                whileHover={{ scale: 1.05, x: 15 }}
-                className="glass p-12 rounded-[3.5rem] border border-brand-purple/10 flex items-center space-x-10 group"
+                whileHover={{ scale: 1.02, x: 10 }}
+                className="glass p-10 rounded-[3.5rem] border border-brand-purple/20 flex items-center space-x-10 group"
               >
-                <div className="w-24 h-24 rounded-3xl bg-brand-primary border border-brand-purple/30 flex items-center justify-center group-hover:bg-brand-purple group-hover:text-brand-light transition-all duration-700 shadow-xl group-hover:shadow-[0_0_40px_rgba(203,0,218,0.5)]">
-                  <Mail className="w-12 h-12" />
+                <div className="w-20 h-20 rounded-2xl bg-brand-primary border border-brand-purple/40 flex items-center justify-center group-hover:bg-brand-purple group-hover:text-brand-light transition-all duration-500 shadow-xl group-hover:shadow-[0_0_40px_rgba(203,0,218,0.4)]">
+                  <Mail className="w-10 h-10" />
                 </div>
                 <div>
-                  <h4 className="text-gray-600 font-black uppercase tracking-[0.4em] text-xs mb-3">Secure Transmission</h4>
-                  <p className="text-brand-purple text-3xl font-black group-hover:text-brand-light transition-colors">deepscript.in@gmail.com</p>
+                  <h4 className="text-gray-600 font-black uppercase tracking-[0.4em] text-[10px] mb-2">Secure Transmission</h4>
+                  <p className="text-brand-purple text-2xl md:text-3xl font-black group-hover:text-brand-light transition-colors">deepscript.in@gmail.com</p>
                 </div>
               </motion.div>
 
-              {/* MASSIVE CONTINUOUSLY ANIMATED PHONE NUMBER */}
-              <div className="relative group pt-16">
-                <motion.div 
-                  animate={{ 
-                    scale: [1, 1.02, 1],
-                    boxShadow: [
-                      "0 0 0px rgba(203,0,218,0)",
-                      "0 0 80px rgba(6,96,216,0.4)",
-                      "0 0 0px rgba(203,0,218,0)"
-                    ]
-                  }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="glass p-16 md:p-20 rounded-[5rem] border border-brand-accent/20 flex flex-col items-center text-center space-y-12 relative overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-brand-purple/5 pointer-events-none" />
-                  
-                  <motion.div 
-                    animate={{ rotate: [0, 5, -5, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, repeatDelay: 2 }}
-                    className="w-20 h-20 rounded-full bg-gradient-to-br from-brand-purple to-brand-accent flex items-center justify-center shadow-[0_0_80px_rgba(203,0,218,0.6)] z-10"
-                  >
-                    <Phone className="w-10 h-10 text-brand-light" />
-                  </motion.div>
+              {/* CLEAN ONE LINE PHONE DISPLAY */}
+              <motion.div 
+                whileHover={{ scale: 1.02, x: 10 }}
+                className="glass p-10 rounded-[3.5rem] border border-brand-accent/20 flex items-center space-x-10 group"
+              >
+                <div className="w-20 h-20 rounded-2xl bg-brand-primary border border-brand-accent/40 flex items-center justify-center group-hover:bg-brand-accent group-hover:text-brand-light transition-all duration-500 shadow-xl group-hover:shadow-[0_0_40px_rgba(6,96,216,0.4)]">
+                  <Phone className="w-10 h-10" />
+                </div>
+                <div>
+                  <h4 className="text-gray-600 font-black uppercase tracking-[0.4em] text-[10px] mb-2">Priority Pulse</h4>
+                  <p className="text-brand-accent text-2xl md:text-3xl font-black group-hover:text-brand-light transition-colors">+91 98418 67282</p>
+                </div>
+              </motion.div>
 
-                  <div className="space-y-4 z-10">
-                    <h4 className="text-brand-purple font-black uppercase tracking-[0.6em] text-sm">Priority Enterprise Access</h4>
-                    <motion.div
-                      animate={{ 
-                        textShadow: ["0 0 0px #cb00da", "0 0 25px #cb00da", "0 0 0px #0660d8"]
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-purple tracking-tighter"
-                    >
-                      +91 98418 67282
-                    </motion.div>
-                  </div>
-
-                  <div className="flex items-center space-x-4 text-brand-accent font-black text-sm uppercase tracking-[0.3em] z-10 animate-pulse">
-                    <div className="w-4 h-4 rounded-full bg-brand-accent shadow-[0_0_20px_#0660d8]" />
-                    <span>Orchestrator Online</span>
-                  </div>
-                </motion.div>
+              <div className="flex items-center space-x-4 text-brand-accent font-black text-xs uppercase tracking-[0.4em] pt-4 px-6 animate-pulse">
+                <div className="w-3 h-3 rounded-full bg-brand-accent shadow-[0_0_15px_#0660d8]" />
+                <span>Orchestrator Online</span>
               </div>
             </div>
           </div>
@@ -118,7 +93,7 @@ const Contact: React.FC = () => {
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            className="glass-high p-16 md:p-20 rounded-[5rem] border border-brand-purple/10 shadow-2xl relative"
+            className="glass-high p-12 md:p-16 rounded-[4rem] border border-brand-purple/20 shadow-2xl relative"
           >
             <AnimatePresence mode="wait">
               {isSubmitted ? (
@@ -126,70 +101,75 @@ const Contact: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="h-[700px] flex flex-col items-center justify-center text-center space-y-14"
+                  className="h-[600px] flex flex-col items-center justify-center text-center space-y-12"
                 >
                   <motion.div 
-                    animate={{ rotate: 360, scale: [1, 1.3, 1] }}
+                    animate={{ rotate: 360, scale: [1, 1.2, 1] }}
                     transition={{ duration: 1.5, ease: "backOut" }}
-                    className="w-40 h-40 bg-brand-purple/20 rounded-full flex items-center justify-center border border-brand-purple/40 shadow-[0_0_80px_rgba(203,0,218,0.3)]"
+                    className="w-32 h-32 bg-brand-purple/20 rounded-full flex items-center justify-center border border-brand-purple/40"
                   >
-                    <CheckCircle2 className="w-20 h-20 text-brand-purple" />
+                    <CheckCircle2 className="w-16 h-16 text-brand-purple" />
                   </motion.div>
-                  <div className="space-y-8">
-                    <h3 className="text-6xl font-black text-brand-light tracking-tighter leading-none">Transmission Confirmed.</h3>
-                    <p className="text-gray-500 max-w-sm mx-auto text-2xl font-light leading-relaxed">
-                      Our architects are analyzing your data. Direct link established.
+                  <div className="space-y-6">
+                    <h3 className="text-5xl font-black text-brand-light tracking-tighter">Transmission Confirmed.</h3>
+                    <p className="text-gray-500 max-w-xs mx-auto text-xl font-light">
+                      Our architects are analyzing your data. Link established.
                     </p>
                   </div>
                   <motion.button 
                     whileHover={{ scale: 1.1 }}
                     onClick={() => setIsSubmitted(false)} 
-                    className="text-brand-purple border-b-2 border-brand-purple font-black tracking-[0.5em] uppercase text-xs transition-all pb-2"
+                    className="text-brand-purple border-b border-brand-purple font-black tracking-[0.5em] uppercase text-[10px] pb-1"
                   >
                     Transmit Again
                   </motion.button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-14">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <InputField label="Entity Name" name="name" value={formData.name} onChange={handleChange} required />
-                    <InputField label="Communication Port" type="email" name="email" value={formData.email} onChange={handleChange} required />
+                <form onSubmit={handleSubmit} className="space-y-12">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <InputField label="Entity Name" name="name" value={formData.name} onChange={handleChange} required placeholder="e.g. Acme Corp" />
+                    <InputField label="Communication Port" type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="email@example.com" />
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <InputField label="Signal Number" type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <InputField label="Signal Number" type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 ..." />
                     <div className="space-y-4">
-                      <label className="text-xs font-black text-gray-600 uppercase tracking-[0.5em] ml-8">Sector Interest</label>
-                      <select 
-                        name="service"
-                        value={formData.service} 
-                        onChange={handleChange}
-                        className="w-full bg-brand-primary/50 border border-brand-purple/10 rounded-[2.5rem] px-10 py-7 text-brand-light focus:outline-none focus:border-brand-purple transition-all appearance-none cursor-pointer backdrop-blur-xl"
-                      >
-                        <option value="" className="bg-brand-support">Select Interest...</option>
-                        <option value="design" className="bg-brand-support">Neural UI/UX</option>
-                        <option value="custom" className="bg-brand-support">Proprietary LLM</option>
-                        <option value="chatbots" className="bg-brand-support">Agentic Bot</option>
-                        <option value="automation" className="bg-brand-support">Autonomous Workflow</option>
-                      </select>
+                      <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.5em] px-2">Sector Interest</label>
+                      <div className="relative">
+                        <select 
+                          name="service"
+                          value={formData.service} 
+                          onChange={handleChange}
+                          className="w-full bg-brand-primary/80 border border-brand-purple/30 rounded-[2rem] px-8 py-6 text-brand-light focus:outline-none focus:border-brand-purple transition-all appearance-none cursor-pointer backdrop-blur-xl hover:border-brand-purple/60"
+                        >
+                          <option value="" className="bg-brand-support text-gray-500">Select Interest...</option>
+                          <option value="design" className="bg-brand-support">Neural UI/UX</option>
+                          <option value="custom" className="bg-brand-support">Proprietary LLM</option>
+                          <option value="chatbots" className="bg-brand-support">Agentic Bot</option>
+                          <option value="automation" className="bg-brand-support">Autonomous Workflow</option>
+                        </select>
+                        <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-brand-purple">
+                          <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <label className="text-xs font-black text-gray-600 uppercase tracking-[0.5em] ml-8">Project Parameters</label>
+                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.5em] px-2">Project Parameters</label>
                     <textarea 
-                      rows={6} 
+                      rows={5} 
                       name="message"
                       value={formData.message} 
                       onChange={handleChange}
                       required
                       placeholder="Define the enterprise mission..."
-                      className="w-full bg-brand-primary/50 border border-brand-purple/10 rounded-[3rem] px-10 py-7 text-brand-light focus:outline-none focus:border-brand-purple transition-all resize-none placeholder-gray-800 backdrop-blur-xl"
+                      className="w-full bg-brand-primary/80 border border-brand-purple/30 rounded-[2.5rem] px-8 py-6 text-brand-light focus:outline-none focus:border-brand-purple transition-all resize-none placeholder-gray-400 backdrop-blur-xl hover:border-brand-purple/60"
                     ></textarea>
                   </div>
                   <motion.button 
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 50px rgba(203,0,218,0.5)" }}
-                    whileTap={{ scale: 0.97 }}
+                    whileHover={{ scale: 1.02, boxShadow: "0 0 40px rgba(203,0,218,0.4)" }}
+                    whileTap={{ scale: 0.98 }}
                     type="submit"
-                    className="w-full bg-gradient-to-r from-brand-purple to-brand-accent text-brand-light font-black py-8 rounded-[2.5rem] shadow-2xl transition-all uppercase tracking-[0.6em] text-sm"
+                    className="w-full bg-gradient-to-r from-brand-purple to-brand-accent text-brand-light font-black py-7 rounded-[2rem] shadow-2xl transition-all uppercase tracking-[0.6em] text-[10px]"
                   >
                     Initiate Transmission
                   </motion.button>
@@ -203,16 +183,17 @@ const Contact: React.FC = () => {
   );
 };
 
-const InputField: React.FC<{ label: string; name: string; type?: string; value: string; onChange: any; required?: boolean }> = ({ label, name, type = "text", value, onChange, required = false }) => (
+const InputField: React.FC<{ label: string; name: string; type?: string; value: string; onChange: any; required?: boolean; placeholder?: string }> = ({ label, name, type = "text", value, onChange, required = false, placeholder = "" }) => (
   <div className="space-y-4">
-    <label className="text-xs font-black text-gray-600 uppercase tracking-[0.5em] ml-8">{label}</label>
+    <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.5em] px-2">{label}</label>
     <input 
       type={type} 
       name={name} 
       value={value} 
       onChange={onChange}
       required={required}
-      className="w-full bg-brand-primary/50 border border-brand-purple/10 rounded-[2.5rem] px-10 py-7 text-brand-light focus:outline-none focus:border-brand-purple transition-all backdrop-blur-xl"
+      placeholder={placeholder}
+      className="w-full bg-brand-primary/80 border border-brand-purple/30 rounded-[2rem] px-8 py-6 text-brand-light focus:outline-none focus:border-brand-purple transition-all backdrop-blur-xl placeholder-gray-400 hover:border-brand-purple/60"
     />
   </div>
 );
