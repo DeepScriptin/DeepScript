@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             <h3 className="text-brand-light font-black text-xs uppercase tracking-[0.5em] mb-14 opacity-40">System Map</h3>
             <ul className="space-y-8 text-xl font-light">
               <li><Link to="/" className="text-gray-500 hover:text-brand-accent transition-all hover:translate-x-3 inline-block">Home</Link></li>
-              <li><Link to="/about" className="text-gray-500 hover:text-brand-accent transition-all hover:translate-x-3 inline-block">Engineering</Link></li>
+              <li><Link to="/about" className="text-gray-500 hover:text-brand-accent transition-all hover:translate-x-3 inline-block">About</Link></li>
               <li><Link to="/services" className="text-gray-500 hover:text-brand-accent transition-all hover:translate-x-3 inline-block">Neural Services</Link></li>
               <li><Link to="/contact" className="text-gray-500 hover:text-brand-accent transition-all hover:translate-x-3 inline-block">Transmission</Link></li>
             </ul>
@@ -92,8 +92,8 @@ const Footer: React.FC = () => {
                 className="flex flex-col space-y-4 bg-brand-primary/40 p-10 rounded-[2rem] border border-brand-purple/20 backdrop-blur-md"
               >
                 <div className="flex items-center space-x-6">
-                  <Phone className="w-10 h-10 text-brand-accent" />
-                  <span className="text-3xl md:text-5xl font-black text-brand-accent tracking-tighter leading-none">+91 98418 67282</span>
+                  <Phone className="w-8 h-8 text-brand-accent" />
+                  <span className="text-2xl md:text-3xl font-black text-brand-accent tracking-tighter leading-none">+91 98418 67282</span>
                 </div>
                 <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.4em] text-gray-500 font-black ml-1">
                    <span className="w-3 h-3 rounded-full bg-brand-purple animate-pulse shadow-[0_0_10px_#cb00da]" />

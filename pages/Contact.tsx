@@ -87,9 +87,9 @@ const Contact: React.FC = () => {
                   <motion.div 
                     animate={{ rotate: [0, 5, -5, 0] }}
                     transition={{ duration: 5, repeat: Infinity, repeatDelay: 2 }}
-                    className="w-28 h-28 rounded-full bg-gradient-to-br from-brand-purple to-brand-accent flex items-center justify-center shadow-[0_0_100px_rgba(203,0,218,0.6)] z-10"
+                    className="w-20 h-20 rounded-full bg-gradient-to-br from-brand-purple to-brand-accent flex items-center justify-center shadow-[0_0_80px_rgba(203,0,218,0.6)] z-10"
                   >
-                    <Phone className="w-14 h-14 text-brand-light" />
+                    <Phone className="w-10 h-10 text-brand-light" />
                   </motion.div>
 
                   <div className="space-y-4 z-10">
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                         textShadow: ["0 0 0px #cb00da", "0 0 25px #cb00da", "0 0 0px #0660d8"]
                       }}
                       transition={{ duration: 2, repeat: Infinity }}
-                      className="text-6xl md:text-7xl lg:text-8xl font-black text-brand-purple tracking-tighter"
+                      className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-purple tracking-tighter"
                     >
                       +91 98418 67282
                     </motion.div>
